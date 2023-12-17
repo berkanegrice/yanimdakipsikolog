@@ -1,1 +1,668 @@
-<h1>Hello!</h1>
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>Tugba Duman</title>
+  <link rel="stylesheet" href="css/theme.min.css">
+
+  <style>
+    /* inter-300 - latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/inter-v12-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-300.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/inter-v12-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-500.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/inter-v12-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-700.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    .learn-more {
+      display: block;
+      margin-top: 10px;
+      color: #fff;
+      text-decoration: underline;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+  <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
+    <div class="container">
+      <a class="navbar-brand pe-4 fs-4" href="/">
+        <img src="img/kafa-3.png" alt="Your Image Alt Text" width="62" height="62">
+        <span class="ms-1 fw-bolder">Tugba Duman</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Modal for Ask -->
+    <div id="modal-ask" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-ask')">&times;</span>
+        <p>
+          Erkekler, içsel olarak genlerini bir sonraki nesillere aktarma içgüdüsü ile “doğurganlığı yüksek” kadınları çekici bulurlar. Bu doğurganlığı yüksek olma durumu ise daha çok fiziksel özelliklere atfedilir. Erkeklere göre, daha genç, düzgün bir cilt, diri beden, parlak saçlar ve dolgun dudaklar; doğurganlığı simgeler.             
+            Erkekler kadınlarla kıyaslandıklarında fiziksel çekicilik ve dış görünüşe daha çok önem verirler. Hatta erkeklerin eşlerini çekici bulma oranı yükseldikçe, ilişkiyi sürdürme çabalarının da arttığı gözlenmiştir (Buss, Shackhelford, 1997). Ancak erkeklerin daha genç kadınları seçmeleri ile kastedilen gençlik değil doğurganlıktır. Ergenlik çağındaki erkekler ise kendilerinden biraz daha büyük kadınları tercih etmeleri bu kanıyı destekler niteliktedir (Kenrick, Keefe, Gabrielidis, Cornelius, 1996).
+            Kadınlar eş seçiminde, daha dikkatli davranırlar çünkü annelik yatırımı babalık yatırımına göre daha fazla zaman ve uğraş gerektirir. Annelik yatırımında çocuğun 9 aylık doğuma kadar olan süreci vardır. Bu yüzden erkekler genlerini devam ettirebilecek doğurganlığı yüksek kadınları tercih ederken kadınlar çocukları için “kaynak sahibi” olan erkeklerle eşleşmeyi tercih ederler. Atalarımızda bu durum hayatta kalma özelliği daha baskın, saldırgan olan erkeklerken, günümüzde iyi bir mesleğe sahip olması, hırslılık düzeyi yüksek, olarak evirilmiştir.             
+            Bir araştırmaya göre, lisans mezunu kadınların baskın erkekleri yumuşak huylu erkeklere göre daha çekici bulduklarını söylemişlerdir (Sadalla, Kenrick, Vershure, 1987). Baskın erkeğin, tuttuğunu koparmada yumuşak huylu erkeğe göre ailesinin gereksinimlerini karşılamada daha becerikli olacağı düşünülmektedir. Erkeklerin karşı cinsi etkilemeye çalışmada maddi kaynakları kullanması da bu bilgileri doğrular niteliktedir (Buss, Schakelford, 1997). Bu demek değil ki kadın eş seçiminde yalnızca baskın ve bencil bir erkekle eşleşir, bu noktada hayatta kalma değerini sorgulanması gerekir, bu kaynaklara sahip ama elindekini paylaşmada yetersiz olarak görülen erkek zamanla avantajını kaybedecektir. Lisans mezunu kadınlar üzerinde yapılan araştırmaya göre, yardımsever ve cömert olan erkekler baskın olanlara göre kısa ve uzun vadeli ilişkilerde daha çekici bulunmuşlardır (Jensen- Campbell, Grazino, West, 1995).
+            Buna ek olarak her iki cinsiyette de karşılıklı sevgi ve şefkatin eş seçiminde en önemli kriter olduğu saptanmıştır (BenHamida, S. Mineka ve diğerleri, 1998).
+            Çekici gelen birey atalarımızdan gelen içgüdüsel bilgilerimize göre belirlendikten sonra, duyguların yoğunlaşması ile vücutta çeşitli farklılıklar meydana gelmeye başlar. Beynin ödül yolağı olarak adlandırılan, zevk verici eylemler sırasında uyarılan talamus, hipotalamus ve ardından duygu merkezi olarak adlandırılan amigdala uyarılır. Sonrasında nörotransmiter salınımı başlar, serotonin, dopamin, nöroadranelin gibi nörotransmiterlerden daha sonra duyguların bağlılık nişanesini sağlayan oksitosin salgılanır.
+            Madde bağımlılıklarında karşımıza çıkan dopaminin aşkla ne ilgisi var? Ne yazık ki sürekli madde kullanımı ile bağılılık geliştirmeyi sağlayan dopamin, aşk ile sürekli salgılanarak bu seferde kişiye bağlılıkta etkin rol oynuyor. Çok mekanik olarak görülen bu sisteme Sigmund Freud ise “aşk yoktur, libido vardır” der. Freud'a göre aşk, cinsel içgüdünün bir türevi, dönüşmüş bir biçimidir. Aşkta saf cinsellikte olmayan bir sevgi ve şefkat boyutu vardır.
+            Sigmund Freud, karşı cinste beğeniyi ise Oedipus kompleksi ile açıklar, erken çocukluk dönemlerinde çocuk karşı cinsteki ebeveynine karşı yoğun ilgi duyar, hatta bu ilginin getirisi ile eş cinsinde olan ebeveyni ile bir çekişme içine girer ve daha sonra karşı cinsteki ebeveynin hayatında biri olduğunun farkına varır ve bu imkansız aşktan kendini alıkoyar ama yapacağı bir şey vardır o da karşı cinsteki ebeveyni gibi bir eş bulmak için eş cinsinden ebeveynine benzemek. Örneğin erkek çocuğu, annesine karşı yoğun ilgi duyar fakat annesinin hayatında biri vardır, babası. Bu durumda bu imkansız aşktan vazgeçer ve babasına benzer, annesi gibi bir eş edinebilmek için. 
+            Oedipus kompleksinde, erkek çocuklarda hadım edilme korkusu ile ebevynlerden uzaklaşma yaşanırken, kız çocukları ise yaşadığı penis kıskançlığı ile annesine öfke duyar ve babasına sahip olmak ister, çocuklar cinsiyet rollerini gelişmesi ile bu karmaşadan kurtulacaktır. Psikanaliz kurama göre, eş seçiminde ebeveyne bezeyen eşlerin seçileceği çıkarımını yapmak çok da zor değildir. 
+            Siz eş seçerken nelere dikkat ediyorsunuz? Sizce aşk rastlantısal mı?
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal for Stres -->
+    <div id="modal-stres" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-stres')">&times;</span>
+        <p>
+          Stresle Baş Etmek:             
+          Stresi Modifiye Etmek, plan yapılabilir ve bu plan ile yeni yollar keşfedilebilir. Örneğin,  patronunuzla veya arkadaşınızla bir sorun yaşadınız, kendinize şu soruyu sorabilirsiniz; "bu davranış stili benimle mi ilgili, yoksa herkese mi böyle davranıyor yani kendiyle (karekter, mizaç vb) mi ilgili?"
+          Stres Aşısı, stres aşısı bireyin strese karşı dayanıklılığını arttırmada ya da etkilenmede kilit rol oynar. Bunun için direkt sonuçtaki büyük hedefe odaklanmaktansa o hedefi gerçekleştirmedeki küçük adımları kendinize görev olarak verebilirsiniz. Detaylandıracak olursak, sosyal ortamlarda konuşmaya çekinen birinin, önce daha küçük ortamlarda daha kısa konuşmalar yapmayı hedef olarak koyması gibi.
+          Stres Yaratan Durum veya Kişiyle İlgili Algı ve Değerlendirmeyi Değiştirmek, stresöre yüklenen anlamı değiştirmek.
+          Strese Verilen Tepkiyi Değiştirmek, bir fikre fazlasıyla zaman ayırılırsa ve çok düşünmeye başlanılırsa, bir süre sonra bu düşünce halini alır. Bu düşünceler de tepkilere yansır.  Stresöre (stres yapıcı) yüklenen anlamı değiştirirken, verilen tepkiyi de değiştirerek çift yönlü birbirine destek verilmesi sağlanabilir.  
+          Kontrolün sizde olduğunu unutmayın," Bu konuda ben ne yapabilirim?” sorusu sorulabilir.
+          Bazen “Bu kadarı yeterli, elimden geleni yaptım diyebilmeli.”
+          Ara Vermek İyi Gelebilir, 10 dakika ortamdan uzaklaşmak gibi..
+          Bitki çayı ve sebze tüketimi arttırılabilir.
+          Gevşeme Teknikleri Öğrenilebilir;  meditasyon, yoga, nefes egzersizi, 54321 tekniği, güvenli yer egzersizi, 4 element tekniği gibi…
+          Hobi Edinmek ve Hobilere Zaman Ayırmak, iyi gelecektir.
+          Fiziksel Aktivite Arttırılabilir, yürüyüş yapmak, spor yapmak, esneme hareketleri yapmak, olduğun yerde 50’ye kadar zıplamak...
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal for baglanma -->
+    <div id="modal-baglanma" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-baglanma')">&times;</span>
+        <p>
+          Bağlanma üzerine yapılan çalışmalar bize, bağlanmada kritik unsurun beslenmeden ziyade fiziksel yakınlık olduğunu göstermiştir(Harlow, 1958). Bebeğin bakım verenle kurduğu ilişkinin fiziksel rahatlık ve duyarlı bakım içermesi durumunda “temel güven” duygusunun yerleştiği gözlenmiştir (Erikson, 1968). Güven duygusu bağlanmanın temelini oluşturur; dünyanın güvenilir, adil bir yer olduğuna dair ömür boyu beklentiyi içeren basamağı düzenler. 
+          Bakım verenin çocuğun ihtiyaçlarını görme, yetme ve zamanında tutarlı olarak bu ihtiyaçları karşılaması durumunda çocuk dünyanın ve insanların güvenli olduğuna inanç geliştirir, bu çocuklar yetişkinliklerinde ve çocukluklarında mutlu ve özgüvenlidir, bu da romantik ilişkilerinde daha sağlıklı sayabileceğimiz; partnerine özel alan tanıyan, ilişkilerindeki olaylara yansız gerçekçi anlamlar yükleyebilen bireyler olmalarını sağlar. Fakat çocuk temel güven duygusunu aldıysa ya da farklı deyişle bakım verenle “güvenli bağlanma” gerçekleştirdiyse kesin olarak yetişkinliğinde sağlıklı ilişkiler kurar diyemeyiz, çünkü farklı çalışmalar güvenli bağlanan çocukların yetişkinliklerinde beklenmedik olaylar yaşamaları (Aile bireylerinde boşanma, aldatılma gibi) ilişki stillerinin güvenliden güvensiz tarafa çekilmesini sağlayabilmektedir (Lewis, Feiring, Rosenthal, 2000).
+          Bakım verenin çocuğun neredeyse her ihtiyacı olduğunda ortada olmaması ve ihtiyaçlarını karşılamaması, çocuğu ihmal etmesi; çocuğun dünyayı güvensiz bir yer olarak algılanmasına neden olur. Bu bağlanma stilindeki çocuklar yetişkinliğinde derinlikten yoksun sığ ilişkiler kuran, hatta ilişkinin derinleşmeye başlamasıyla ortadan kaybolan bireyler olabilirler. Çünkü derin ilişki onları, “özerkliğini kaybetme “ korkusuyla birlikte baskılanan utanç duygusunu dışarıya “öfke" olarak yansıtarak, ilişkiden uzaklaştırmaya iter. 
+          Bakım veren, çocuğun ihtiyaçlarını bir karşıladı bir karşılamadıysa yani tutarsız bir stil sergilediyse, çocuk bakım verenin her an bırakabileceğine dair inanç geliştirir. Bu stilde yer alan çocuklar yetişkinliklerinde; kontrol etme ve bunu partnerinden de bekleme, kıskançlığın hakim olduğu ilişkiler kuran, sınır çizmede zorlanan, kendinden ödün veren, ilgiyi ilişkinin temeline oturtan bireyler olabilirler. Öte yandan bu kişiler ufak kopuklukları ciddi tehdit olarak algılamaya meyillidir. Küçük problemlere büyük anlamlar yükler ve sürekli güvenlik ihtiyacını sağlamak adına partnerinden ilgi bekler. Altta yatan temel inanç ise sevilmeye layık olmadığıdır. 
+          Son zamanlarda eklenen, farklı kaynaklarda; dağınık, saplantılı, kaotik bağlanma stili olarak tanımlanan modelde ise; aile içinde istismar, şiddet ve kaos hakim olabilmektedir ya da temel bakım veren depresif birey olabilir. Bu çocuklar yetişkinliklerinde kurdukları ilişkilerde; birbirine özel alan tanımayan, neredeyse her etkinliklerini partnerleri ile birlikte yapan bireyler olabilirler. Bu kişiler, bencil, empatiden yoksun, suça eğilimi olan, baskıcı, yalnızlık hissini yoğun olarak yaşayan bireyler olabilirler. Dağınık bağlanmanın daha çok dışsalaştırılmış problemlerle (örneğin; saldırganlık, düşmanlık, aykırılık) güçlü ilişkili olduğunu birçok çalışma desteklemektedir (Fearon ve diğerleri, 2010).
+          Burada evet aileler çocukların temel bakımlarını gerçekleştirirken; fiziksel rahatlık ve duyarlı bakım sağlamalı, çocuk yeni bir alan keşfederken bakım veren yanında ve destekleyici olmalıdır. Çünkü araştırmalar sonucunda, erken güvenli bağlanma ile sonraki tecrübelerin, özellikle anne ilgisi ve yaşam stresinin çocukların ileriki yıllarda davranış ve uyumlarıyla bağlantılı olduğu saptanmıştır (Thompson, 2008).  Fakat aklınıza şu soru gelebilir, kritik dönemde (0-24 ay) temel bakım verenle “güvenli bağlanma” gerçekleşmezse, tüm ilişkilerimiz sağlıksız bir yöne mi çekilecek? 
+          Hayır. Bazı bireyler “kendilik değerlerinin” yüksek düzeyde farkında oluyorlar ya da terapi sürecinde bunları keşfederek değiştirebiliyorlar. Yani güvensiz bağlanma stiline sahip bir birey bunu değiştirebilir. Öte yandan bununla ilgili yazılmış birçok kitap mevcut yani bu konuda herhangi bir eksiklik hissediliyorsa kitap okuyarak videolar izleyerek veya terapiye başlayarak değişim sağlanabilir. 
+          Kitap Önerisi: Bağlanma - Aşkı Bulmanın ve Korumanın Bilimsel Yolları, Amir Levine, Rachel Heller
+          Ek Notlar:
+          Bağlanma Kuramı: Mary Ainsworth ve John Bowlby tarafından geliştirilmiştir.
+          Bakım veren; ebevyn, aile büyükleri, bakıcı olabilir.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-panik" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-panik')">&times;</span>
+        <p>
+          Panik atağın sık sık yaşanması durumu ise panik bozukluktur. Panik atağı her insan hayatında deneyimleyebilir, her deneyim panik atak tedavisini gerektirmez. Sık sık yaşanması, hayatın akışını etkiliyor olması, işlevselliğe zarar vermesi, tekrar yaşanacağına dair yoğun korku ve kaygı duyulması gibi durumlarda bir uzmana başvurmak faydalı olacaktır.              
+          Panik atak tedavisi, medikal tedavi (SSRI, benzodiapinler, beta blokerlar) ile gerektiği noktada desteklenebilmektedir, Bunun dışında nefes egzersizleri, açık hava yürüyüşleri işe yarayacaktır.              
+          Görüşmeler genellikle haftada 1 veya 2 kere şeklinde düzenlenir. Atak sırasında ve öncesindeki duygu, düşünce, davranış üzerinde durulur. Kişinin hangi olay ve durumları düşündüğünde veya yaşadığında tetiklendiği keşfedilir. Sonrasında küçük ev ödevleri ve döngülerin fark edilmesiyle seasnlar ilerler.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-bireysel" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-bireysel')">&times;</span>
+        <p>
+          Terapi süresinde danışan ve danışman arasında kurulan "terapotik ittifak” önemli bir kıstasdır, kurulan bağ, güven ilişkisi son derece önemlidir. Terapi 40 dk-1 saat arasında genellikle haftada 1 veya 2 haftada 1 olarak gerçekleştirilmektedir. Terapinin ne kadar süreceği danışandan alınan etkiye, çalışılan psikolojik rahatsızlığa göre çeşitlilik göstermektedir.                          
+          Terapi süresinde, danışanın hayatıyla ilgili herhangi bir karar vermesini sağlayacak tavsiyede bulunulmaz. Terapi danışanın kendini keşfetmesi ve dolayısıyla bu kararı kendinin vermesinin önünü açar.                         
+          Bireysel Yetişkin Terapide çalışılan bazı konular,
+          Kaygı bozuklukları
+          Panik bozukluk
+          Depresyon
+          Fobiler
+          Kayıp yas danışmanlığı
+          Cinsel bozukluklar
+          Öfke ve stresle baş etme yöntemleri
+          İletişim problemleri
+          Yeme bozuklukları
+          Dürtü bozuklukları
+          Duygu durum bozuklukları
+      </p>
+      </div>
+    </div>
+
+    <div id="modal-kaygi" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-kaygi')">&times;</span>
+        <p>
+          Anksiyete bozukluklarını; Panik bozukluk, sosyal fobi, özgül fobi, yaygın anksiyete bozukluğu, ayrılma anksiyetesi bozukluğu (yalnızca çocuklarda), seçici konuşmazlık (mutizm, yalnızca çocuklarda) olarak sınııflandırabiliriz.
+          Özgül fobide, nesne veya duruma karşı orantılı olmayan, kişinin de mantıksız korku olduğunun farkında olduğu, yoğun kaygı durumudur. Birçok özgül fobi yaşamı yardım almayı gerektirecek kadar olumsuz etkilemez. Sosyal fobi başka insanların varlığında, mantıklı olmayan korku durumudur. 
+          Genellikle eleştiriden, rezil olmaktan korku ile kendini gösterir, hayatı oldukça kısıtlayan fobi türüdür. Topluluk önünde ve hatta arkadaş ortamında rahat konuşamama ve kaçınma davranışıyla kendini gösterir, kaçınma davranışının tekrarlanması ise durumun kronikleşmesine neden olur. Yaygın anksiyete bozukluğunda, odağı belli olmayan kaygı söz konusudur bir nesneye değil birçok duruma karşı duyulan kaygı türüdür. Somatik yakınmalara çok sık rastlanır. (fibromiyalji gibi)
+          Bilişsel davranışcı tedavide gevşeme teknikleri, sistematik duyarsızlaşma, maruz bırakma, rol canlandırma- model alma, bulantı seli (flooding), edimsel teknikler, sosyal beceri eğitimleri kullanılmaktadır. 
+          Gerekli görülen durumlarda medikal tedavi ile desteklenebilir.  Psikianalitik tedavi yönteminde ise daha çok kaygı ve korkunun altında yatan bastırılmış travmalar olduğunu savunur ve amaç bastırılmış travmaları ortaya çıkarıp, travmalar ile çalışılır bu sırada rüya analizi, transferans, karşıt transferans, serbest çağrışım gibi yöntemler kullanılmaktadır.
+        </p>
+      </div>
+    </div>
+
+    <div class="w-100 overflow-hidden bg-gray-100" id="top">
+      <div class="container position-relative">
+        <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left"
+          style="background-image: url(img/frontpage.jpg);">
+        </div>
+        <div class="row">
+          <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
+            <h2 class="display-2 fw-bold mt-5">Psikolog <br> Tuğba Duman</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-vh-5 w-100 overflow-hidden" id="services">
+      <div class="container">
+        <div class="row d-flex justify-content-end">
+          <div class="col-lg-8" data-aos="fade-down">
+            <h2 class="display-6">Bazen hayatta çaresiz, mutsuz anlarınız olabilir ve bu anılar hiç
+              gitmeyecek hep
+              kalacak gibi hissedebilirisiniz.
+              Bu anılar yalnızca kötü anılar olarak kalmayıp mental olarak çökkün, yalnız, atak halinde hissetmenize
+              sebep olabilir.
+              Bu gibi durumlarda terapi desteği almak veya psikolojik danışma süreci içinde olmak size yardımcı
+              olacaktır.</h2>
+          </div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="display-4">Çalışma Alanlarım</h4>
+            <span class="h5 fw-lighter">01.</span>
+            <h3 class="py-5 border-top border-dark">Anksiyete (Kaygı) Bozukluğu.</h3>
+            <p>Kaygı, gelecekte olası bir tehlike hakkında duyulan genel endişe durumudur. Az miktarda olması hayatta
+              kalmak, çalışmak gibi olumlu sonuçlar verirken fazla olması hayatın akışını, işlevselliğini olumsuz
+              etkiler.
+              Anksiyete bozukluklarını; Panik bozukluk, sosyal fobi, özgül fobi, yaygın anksiyete bozukluğu, ayrılma
+              anksiyetesi bozukluğu (yalnızca çocuklarda), seçici konuşmazlık (mutizm, yalnızca çocuklarda) olarak
+              sınııflandırabiliriz.</p>
+            <!-- <a href="javascript:void(0);" onclick="openModal('modal-anksiyete')" class="link-fancy">Learn More</a> -->
+          </div>
+    
+          <div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
+            <span class="h5 fw-lighter">02.</span>
+            <h3 class="py-5 border-top border-dark">Depresyon.</h3>
+            <p>Depresyon çoğu zaman sıkıntılı hissedilen ruh hali ile iç içe tanımlansa da bu zihnimizde depresyonu
+              anlamlandırmayı eksik bırakıyor.
+              Her sıkıntılı bitkin hisseden için depresyonda demek günlük kullanımda yaygın olsa da bu depresyonun ciddi
+              bir bozukluk olduğunu gözardı etmemize sebebiyet veriyor.
+              Depresyon sanıldığının aksine kişinin günlük hayattaki işlevselliğini büyük ölçüde olumsuz etkileyen
+              ruhsal bir bozukluktur anlık can sıkıntısı ile karıştırılmamalıdır.</p>
+              <!-- <a href="javascript:void(0);" onclick="openModal('modal-depresyon')" class="link-fancy">Learn More</a> -->
+            </div>
+    
+          <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+            <span class="h5 fw-lighter">03.</span>
+            <h3 class="py-5 border-top border-dark">Obsesif Kompulsif Bozukluk.</h3>
+            <p>Obsesyon, “yanlış olduğu bilindiği halde zihinden atılamayan, mantık ve muhakeme ile uzaklaştırılamayan,
+              saplantı halindeki fikirler” olarak tanımlanır.
+              Kompülsiyon, saplantılı düşünceyi (obsesyon) zihinden uzaklaştırmak, var olan kaygıyı, gerilimi azaltmak
+              ve kısa süreliğine rahatlamak için yapılan, belli ritüellere dayanan ve bir amaca yönelik yapılan mental
+              ya da motor eylemlerdir.
+              Obsesyonlar anksiyete artışına neden olurken, kompulsiyonlar anksiyeteyi anlık olarak azaltır. Fakat uzun
+              vadede yararı yoktur, aksine OKB’yi̇ pekiştirir ve yaşamı her seferinde bir adım daha zorlaştırır.
+              Kişinin üreticiliğini, uyumunu ve başarısını olumsuz etkiler..</p>
+              <!-- <a href="javascript:void(0);" onclick="openModal('modal-obsesif')" class="link-fancy">Learn More</a> -->
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
+      <div class="container">
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <div class="row gx-5 d-flex">
+              <div class="col-md-11">
+                <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right"
+                  style="background-image: url(img/anasayfa-1.jpg);--bs-aspect-ratio: 50%;"></div>
+              </div>
+              <div class="col-md-5 offset-md-1">
+                <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up"
+                  style="background-image: url(img/anasayfa-2.jpg);"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left"
+                  style="background-image: url(img/anasayfa-3.jpg);--bs-aspect-ratio: 150%;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h3 class="py-5 border-top">Ben Kimim ?</h3>
+            <ul class="py-5 border-top border-dark list-unstyled" data-aos="fade-left">
+              <li>Tuğba Duman olarak tanınıyorum ve 2017 yılında Beykent Üniversitesi Psikoloji bölümü'nden Şeref derecesi ile mezun oldum.</li>
+              <li>Mezuniyetimden sonra 3 aylık kişisel danışmanlık ve ardından Karataş Anadolu Lisesi'nde staj yaptım.</li>
+              <li>Özel Ekarte Anadolu Lisesi'nde "okul psikoloğu" olarak görev aldım.</li>
+              <li>Psikiyatrist Dr. Mehmet Oğuz Kliniği'nde staj yaparken aynı zamanda Satürn Aile Danışmanlığı Merkezi'nde çalıştım.</li>
+              <li>Covid dönemi ile birlikte bipsikolog sitesi üzerinden online terapi hizmetine başladım ve 4 yıldır aktif olarak danışanlarla buluşuyorum.</li>
+              <li>Yetişkinlere birebir ve grup terapisi sunmaktayım.</li>
+              <li>Çeşitli eğitimlerin ardından Minnesota Multiphasic Personality Inventory (MMPI), Ankara Gelişim Envateri (AGTE), Bender–Gestalt Görsel Motor Algı Testi, SCL-R 90, Beck Anksiyete Envanteri ve Beck Depresyon Ölçeği uygulama yetkinliği kazandım.</li>
+              <li>Türk Psikologlar Derneği'nin "Travma ve Krize Müdahale", "Sınav Stresi" ve "Yas Danışmanlığı" gibi birçok eğitimine katıldım.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+
+  <div class="py-vh-5 w-100 overflow-hidden" id="services">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8 text-center" data-aos="fade-down">
+          <h5 class="display-5">Makaleler</h5>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <span class="h5 fw-lighter">01.</span>
+          <h3 class="py-5 border-top border-dark">Aşk Rastlantısal Mıdır ?</h3>
+          <p>
+            Aşık olmak, bir çok kişinin midesinde kelebekler uçuşması hızlı kalp çarpıntıları el terlemeleri yemek yemenin büyük oranda azalması ya da aşırı yemek yeme olarak birtakım belirtiler ile tanımladığı, ve bu belirtilerin kişiyi içine çekmesi durumudur.           
+            Aşık olmadan önce karşı cinsi cazip kılan özelliklere değinmekte fayda var. Bu özellikler cinsiyete göre farklılık göstermektedir. 
+          </p>
+          <a href="javascript:void(0);" onclick="openModal('modal-ask')" class="link-fancy">Daha fazla gör</a>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
+          <span class="h5 fw-lighter">02.</span>
+          <h3 class="py-5 border-top border-dark">Strese Yatkın Kişilik Özellikleri</h3>
+          <p>
+            Rekabetçi, sabırsız, işe adanmış hisseden, güvensiz, kaygılı, olumsuza odaklanan...          
+            Stresten Koruyucu Bireysel Özellikleri:             
+            Yüksek iyimserlik düzeyi, fazla psikolojik denetim, yüksek benlik saygısı, toplumsal ve sosyal destek…             
+            Stres Yaratıcının Ciddiyetini Belirleyen Kriterler:             
+            Stresin şiddeti, 
+            Stresin kronikliği (ne zamandır sürüyor?), 
+            Zamanlaması (hep aynı olay, durum veya yerde mi ortaya çıkıyor?), 
+            Yaşamı ne kadar etkiliyor?, 
+            Ne kadar denetlenebilir?             
+          </p>
+            <a href="javascript:void(0);" onclick="openModal('modal-stres')" class="link-fancy">Daha fazla gör</a>
+          </div>
+  
+        <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+          <span class="h5 fw-lighter">03.</span>
+          <h3 class="py-5 border-top border-dark">Bağlanma Modellerinin Yetişkinlikte Kurulan Romantik İlişkilere Yansıması</h3>
+          <p>
+            Bağlanma Modellerinin Yetişkinlikte Kurulan Romantik İlişkilere Yansıması  
+            Bağlanma; benlik algısı, vicdani gelişim, duygusal anlayış, romantik ilişkiler gibi birçok konuda fikir verir.  Bağlanma iki temel gruba ayrılır. Güvenli bağlanma ve güvensiz bağlanma;  güvensiz bağlanma ise kendi içinde 3’e ayrılır. Kaçınan, Kaygılı ve Dağınık. Yazının devamında bağlanma stillerinden ve yetişkinlikteki yansımalarından bahsedeceğim.
+          </p>
+          <a href="javascript:void(0);" onclick="openModal('modal-baglanma')" class="link-fancy">Daha fazla gör</a>
+        </div>
+
+        <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+          <span class="h5 fw-lighter">04.</span>
+          <h3 class="py-5 border-top border-dark">Panik Bozukluk Tedavisi</h3>
+          <p>
+            Panik Atakta görülen bazı belirtiler, kalp krizi geçiriyorum korkusu ile bireylerin acile taşınmalarına neden olabilir. Belirtiler çok benzer olsada panik atak yaşayan bireyin atağı yaşama nedeni fizyolojik bir duruma bağlanamaz. Hatta şunu söyleyebiliriz, kişi kalbinde fiziksel bir rahatsızlığı olduğuna bu ataklar ile o kadar ikna olmuştur ki, devamlı kardioloğun yolunu tuttar ama genellikle bir bulguya rastlanmaz. Bu noktada birey bir ruh sağlığı uzmanına başvurmalıdır. 
+            Panik atak belirtilerine bakacak olursak; gögüs ağrısı, nefes almada ve yutkunmada zorluk, nefes darlığı, sıcak basması, kalp atışının hızlanması, baş dönmesi, üşüme/ titreme, mide bulantısı, kendine uzaklaşma (depersonilazasyon), gerçeklikten uzaklaşma (derealizasyon), ölecekmiş gibi hissetme, karıncalanma gibi belirtilerle kendini gösterir.
+          </p>
+          <a href="javascript:void(0);" onclick="openModal('modal-panik')" class="link-fancy">Daha fazla gör</a>
+        </div>
+
+        <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+          <span class="h5 fw-lighter">05.</span>
+          <h3 class="py-5 border-top border-dark">Bireysel (Yetişkin) Terapi</h3>
+          <p>
+            Kişilerin yaşamları boyunca deneyimleri onlarda olumsuz etkiler bırakabilmektedir. Bu yaşam tecrübeleri veya yaşamın doğal akışı terapiye ihtiyacı görünür kılmaktadır. 
+            Bireysel terapi, kişi ile terapistin baş başa olduğu ya yüz yüze ya da online olarak görüşmelerdir. Bu görüşmeler kişinin hayat kalitesini arttırarak, kendisiyle ilgili birçok duygu, düşünce ve davranışlarını yeniden inşa etmesine hizmet etmektedir.              
+          </p>
+          <a href="javascript:void(0);" onclick="openModal('modal-bireysel')" class="link-fancy">Daha fazla gör</a>
+        </div>
+
+        <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+          <span class="h5 fw-lighter">06.</span>
+          <h3 class="py-5 border-top border-dark">Anksiyete (Kaygı) Bozukluğu Nedir?</h3>
+          <p>
+            Kaygı, gelecekte olası bir tehlike hakkında duyulan genel endişe durumudur. Az miktarda olması hayatta kalmak, çalışmak gibi olumlu sonuçlar verirken fazla olması hayatın akışını, işlevselliğini olumsuz etkiler. Varolan kaygı durumunun işlevsel mi yoksa işlevsel olmayan kaygı mı olduğuna nasıl karar verebiliriz?
+            Her kaygı patolojik değildir, kaygı yaratan nesne, olay veya düşünsel ögenin yarattığı korku duygusu olayla uyumsuz olması, kişi tarafından kontrol edilemez olması, işlevselliği bozuyor hayat akışını olumsuz etkiliyor olması patoloji noktasında düşünmemizi sağlayabilir.
+          </p>
+          <a href="javascript:void(0);" onclick="openModal('modal-kaygi')" class="link-fancy">Daha fazla gör</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="bg-light w-100 overflow-hidden" id="testimonials">
+      <div class="container py-vh-6">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8 text-center">
+            <h2 class="display-6">Danışan Yorumları</h2>
+          </div>
+          <div class="col-12 mt-4">
+            <div class="row row-cols-1 row-cols-md-2 g-5 d-flex align-items-center">
+              <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-right">
+                <div class="card p-4 mt-3 border-0">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Tuğba hanım ile seanslarımızı ve bu süreçte aldığımız yolu düşününce "iyi ki" diyorum.
+                        Pandemi döneminde başlayan görüşmelerimizi geçen yıl tamamladık ve sanırım ilk seans için adım
+                        atmam hayatımdaki en doğru kararlardan biriydi.
+                        Birçok konuda bana farkındalık ve doğru bakış açısını kazandırdı.
+                        Bazen bir konuda ona tekrar danışmak istediğimde, biraz durup, aslında Tuğba hanımın bu konuda
+                        ne soracağını biliyorum deyip, bana kazandırdıklarıyla yola devam ediyorum:)"</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <div>
+                        <span class="h6 fw-5">S**** B******</span><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="card p-4 shadow mt-3 border-0" data-aos="fade-down">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Tuğba Hanım ile aralıklı olarak iki seneden fazladır terapi geçmişim var.
+                        İlk başta majör depresyon ve panik atak hastası olarak başladığımız seanslar daha sonra
+                        psikolojik danışma seanslarına evrildi.
+                        En zor zamanlarımda beni doğru düşünmeye, sorunlarımla başa çıkmaya, hayatımı şekillendirmem
+                        için doğru adımlara yönlendirdi.
+                        Kalabalık psikolog ve psikiyatrist geçmişimde bana en iyi gelen uzmanlardan biri kendisi. Naif,
+                        anlayışlı ve güzel kişiliği için kendisine teşekkür ederim."</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <p class="card-text">
+                        <span class="h6 fw-5">B****** Ö********</span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="card p-4 mt-3 border-0" data-aos="fade-left">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Tuğba Hanım ile pandemi döneminin sonlarına doğru tanıştık ve kendisi ile çalıştığım için çok
+                        mutluyum.
+                        Hayatımın bakış açısını, düşüncelerimi değiştirdi. Her zaman söyledikleri, konuştuklarımız
+                        aklımda.
+                        Sorunlarımı çözdük(sayesinde) ve halen daha eğer bir yerde takılırsak hep konuştuklarımı
+                        hatırlıyorum işe de yarıyor :)
+                        Herşey için çok teşekkür ederim Tuğba Hanım :)"</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <p class="card-text">
+                        <span class="h6 fw-5">G***** Ç*****</span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="card p-4 mt-3 border-0" data-aos="fade-right">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Tuğba hanımla terapi yolunda dile kolay 2 senem geçti. Çocukluk tramvaları, aile içi sorunlar,
+                        panik bozukluk, öfke kontrolü, duygusal yeme bozukluğu, fobilerim...
+                        Hayata dair değiştirmek, düzeltmek için alabileceğim tüm terapileri tek bir psikologda bulmuş
+                        oldum.
+                        Öyle ki bazen en yakın arkadaşımmış gibi hissettim. Beni, ailemi, çevremi, insanları öyle güzel
+                        analiz edip aktarıyor, yanlışlarımı öyle nahif açıklıyor ki iyileşmemem mümkün değil.
+                        Yaşının genç olması sebebiyle de çok çok rahat önyargı korkusu olmadan her şeyi konuşabildim.
+                        Bazen güldük bazen ağladık. Tavsiyelerine uyup verdiği ödevleri yerine getirerek her şeyin
+                        düzeldigini gördüm.
+                        Terapi uzun ve dolambaçlı bir yol. Ama ben bu yolda bana daha iyi gelebilecek insan hayal
+                        edemiyorum.
+                        Ben çok karanlıklar aştım ve hepsinde önümde ışığı tutan Tuğba hanımdı. İyi ki tercih etmişim.
+                        İyi ki varsınız Tuğba hanım."</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <p class="card-text">
+                        <span class="h6 fw-5">E****** U***</span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="card p-4 mt-3 border-0" data-aos="fade-up">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Tuğba hanımla görüşmeye başladığımdan bu yana sosyal hayatımda, özel hayatımda kendimde çok
+                        güzel gelişmeler fark ediyorum.
+                        Özgüvenimin yükselmesi, kaygılarımı düzenleyebilmek gerçekten çok güzel bir duygu.
+                        Çekinmeden her şeyi anlatabileceğim bir ortam oluşturan, çok samimi bir psikolog kendisi.
+                        Teşekkür ediyorum ve kesinlikle tavsiye ediyorum"</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <p class="card-text">
+                        <span class="h6 fw-5">Ş**** A***</span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="card p-4 mt-3 border-0" data-aos="fade-left">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Aralik 2021 - Mayis 2022 tarihleri arasinda siddetlenen anksiyetem için
+                        Tugba Hanim'dan destek aldim. Kendisi çok nazik, profesyonel, danisanina güven duygusu veren bir
+                        psikolog. Ben kendisinin ögrettigi metodlar sayesinde
+                        anksiyetemi kontrol altina alabildim. 5 ay boyunca içimde huzurluk yaratan,
+                        hayatimi etkileyen -ama aslinda varolmayan, sadece beynimin var olduguna inandigi -
+                        sikintilarimdan
+                        kurtulabildim. Su anda mutlu ve huzurlu bir sekilde devam etmekteyim
+                        hayatima.. lyi ki Tugba Hanim'la
+                        çalismisim diyorum. Kendisine emekleri
+                        için bir kez daha tesekkür ediyor ve özellikle anksiyete, panik atak, OKB gibi
+                        rahatsizliklarla mücadele edenlere
+                        Tugba Hanim'i tavsiye ediyorum."</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <p class="card-text">
+                        <span class="h6 fw-5">R***** G*****</span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="card p-4 mt-3 border-0" data-aos="fade-right">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Tugba Hanim'la ilk görüsmemizi Nisan
+                        basinda yapmistik. Sinav anksiyetesiyle
+                        ilgili büyük sikintilarm vardi. Kendisiyle
+                        sinav anksiyetesiyle basladiktan sonra
+                        hayatimin isleyisine engel olan birçok konu hakkinda görüstük ve etkili
+                        çözümler bulduk. Bunlarin arasinda aile ve arkadas problemleri, yeme bozuklugu, kisisel sinirlar
+                        ve yasadigim her türlü
+                        anksiyete problemi vardi. 4 ayda kendisiyle çok güzel bir yol aldigimizi
+                        düsünüyorum ve kendimdeki farki
+                        gözlemleyebiliyorum. Tugba Hanim cok
+                        sakin, samimi, güler yüzlü, akilc düsünen,
+                        akilci ve ise yarar gözümler üretebilen,
+                        rahatlikla güvenebileceginiz bir psikolog.
+                        Adeta dünyaya psikolog olmaya gelmis
+                        birisi diyebilirim. Kendisine de buradan
+                        çok tesekkür ediyorum. lyi ki varsiniz."</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <p class="card-text">
+                        <span class="h6 fw-5">S****** S***</span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="card p-4 mt-3 border-0" data-aos="fade-up">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p>"Tugba hanimla ocak ayinda bir aksam ciddi panik atak geçirirken tanistim. O
+                        zaman tabi ölecegim korkusu ile
+                        aglamakli bir sekilde konusurken bir anda herseyi unutup konusmaya basladigimi farkettim. Öyle
+                        rahatlamistim ki.. Daha sonra seanslarimiza devam etme karan aldik ben bile kendimde olan
+                        degisimi görüyordum.Tugba hanimin bana
+                        söyledigi seyleri yapmaya calistim.
+                        Insallah panik atagi yendigimizi düsünüyorum.Kendisine çok tesekkür
+                        ediyorum. lyi ki Tugba hanimi seçmisim, iyi
+                        ki onu tanimisim.."</p>
+                    </blockquote>
+                    <div class="d-flex justify-content-between border-top pt-3">
+                      <p class="card-text">
+                        <span class="h6 fw-5">G**** T***</span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="workwithus">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8 text-center" data-aos="fade">
+              <h2 class="display-6 mb-5">İletişim Bilgileri: <br>
+                0(554) 611 99 87 <br>
+                psikolog.tugbaduman@gmail.com <br>
+                Instagram: psikolog.tugbaduman <br>
+                Mimar Sinan Mah. Şair Eşref Blv. Güneş Apt. No: 80 K:1 D:4, 35220 Konak/İzmir</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // values from 0 to 3000, with step 50ms
+    });
+  </script>
+
+  <script>
+    let scrollpos = window.scrollY
+    const header = document.querySelector(".navbar")
+    const header_height = header.offsetHeight
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+    window.addEventListener('scroll', function () {
+      scrollpos = window.scrollY;
+
+      if (scrollpos >= header_height) { add_class_on_scroll() }
+      else { remove_class_on_scroll() }
+
+      console.log(scrollpos)
+    })
+
+    // Function to open the modal
+    function openModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
